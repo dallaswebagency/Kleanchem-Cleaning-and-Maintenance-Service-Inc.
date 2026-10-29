@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kleanchem | Cleaning, Plumbing and Maintenance in Edmonton</title>
-<meta name="description" content="To tailor our professional services to the specific needs of each and every customer we work with. Professional plumbing, cleaning and maintenance services. Call 780 695 2436.">
+<title>Edmonton Plumbing, Cleaning and Maintenance | Kleanchem</title>
+<meta name="description" content="Kleanchem offers plumbing, drain cleaning, home and office cleaning and maintenance in Edmonton, AB. 24 hrs plumbing services. Call 780 695 2436 for a quote.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
@@ -76,25 +76,36 @@ nav a:hover::after,nav a.on::after{width:100%}
 .callbox strong{display:block;font-family:var(--cond);font-weight:700;font-size:23px;letter-spacing:.03em;color:var(--navy-deep);line-height:1.1;white-space:nowrap}
 .menu-btn{display:none;background:none;border:2px solid var(--navy-deep);color:var(--navy-deep);font-family:var(--cond);font-weight:700;letter-spacing:.08em;padding:8px 14px;text-transform:uppercase;cursor:pointer}
 
-/* hero: background image, centered */
-.hero{position:relative;color:#fff;text-align:center;padding:120px 0 200px;background:var(--navy-deep);overflow:hidden;isolation:isolate}
-.hero .bg{position:absolute;inset:0;z-index:-2}
-.hero .bg img{width:100%;height:100%;object-fit:cover;object-position:50% 12%}
-.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(17,36,65,.84) 0%,rgba(17,36,65,.7) 48%,rgba(17,36,65,.94) 100%),radial-gradient(circle at 50% 40%,rgba(107,142,85,.28),transparent 60%)}
-.hero .ring{position:absolute;left:50%;top:46%;width:min(1400px,140vw);transform:translate(-50%,-50%);z-index:-1;opacity:.55;pointer-events:none}
-.eyebrow{display:inline-flex;align-items:center;gap:16px;font-family:var(--cond);font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--green-light);font-size:16px;margin-bottom:26px}
-.eyebrow::before,.eyebrow::after{content:"";width:42px;height:3px;background:var(--green);flex:none}
-.hero h1{font-family:var(--cond);font-weight:700;text-transform:uppercase;line-height:.93;font-size:clamp(46px,8vw,122px);letter-spacing:.005em}
+/* hero: split with photo grid */
+.hero{position:relative;color:#fff;padding:76px 0 210px;background:var(--navy-deep);overflow:hidden;isolation:isolate}
+.hero .bg{position:absolute;inset:0;z-index:-3}
+.hero .bg img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;opacity:.55}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(100deg,rgba(17,36,65,.98) 0%,rgba(17,36,65,.92) 46%,rgba(31,68,120,.7) 100%)}
+.hero .ring{position:absolute;right:-8%;top:50%;width:min(980px,90vw);transform:translateY(-50%) rotate(-14deg);z-index:-1;opacity:.55;pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:14px;font-family:var(--cond);font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--green-light);font-size:16px;margin-bottom:24px}
+.eyebrow::before{content:"";width:46px;height:3px;background:var(--green);flex:none}
+.hero h1{font-family:var(--cond);font-weight:700;text-transform:uppercase;line-height:.94;font-size:clamp(40px,5vw,76px);letter-spacing:.005em}
 .hero h1 span{display:block}
-.hero h1 .mid{font-family:var(--serif);font-style:italic;font-weight:400;text-transform:none;color:var(--green-light);letter-spacing:-.01em;font-size:.92em;line-height:1.02}
-.hero .lede{margin:28px auto 0;max-width:640px;font-size:21px;color:#e4ecf7}
+.hero h1 .mid{font-family:var(--serif);font-style:italic;font-weight:400;text-transform:none;color:var(--green-light);letter-spacing:-.01em;font-size:.9em;line-height:1.02}
+.hero .tag{font-family:var(--serif);font-style:italic;font-size:clamp(21px,2.2vw,28px);color:#fff;margin-top:26px;padding-left:18px;border-left:4px solid var(--green)}
+.hero .lede{margin-top:22px;max-width:580px;font-size:19px;color:#dbe6f4}
 .hero .lede b{color:#fff;font-weight:600}
 .cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:36px}
-.chips{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:40px}
-.chips a{display:inline-flex;align-items:center;gap:9px;padding:9px 18px;border:1px solid rgba(255,255,255,.35);border-radius:40px;font-family:var(--cond);text-transform:uppercase;letter-spacing:.1em;font-weight:600;font-size:15px;color:#fff;background:rgba(255,255,255,.06);backdrop-filter:blur(4px);transition:background .2s,border-color .2s}
-.chips a:hover{background:var(--green);border-color:var(--green)}
-.chips .ic{width:17px;height:17px;color:var(--green-light)}
-.chips a:hover .ic{color:#fff}
+.hero .cta{justify-content:flex-start;margin-top:30px;gap:10px;flex-wrap:nowrap}
+.hero .cta .btn{padding-left:22px;padding-right:22px;white-space:nowrap}
+.facts{list-style:none;display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:34px;padding-top:26px;border-top:1px solid rgba(255,255,255,.18)}
+.facts li{display:inline-flex;align-items:center;gap:10px;font-family:var(--cond);text-transform:uppercase;letter-spacing:.05em;font-weight:600;font-size:13.5px;color:#fff;white-space:nowrap}
+.facts .ic{width:20px;height:20px;color:var(--green-light)}
+.bento{position:relative;display:grid;grid-template-columns:1.12fr .88fr;grid-template-rows:1fr 1fr;gap:14px}
+.bento .tp{position:relative;overflow:hidden;background:var(--teal);box-shadow:0 30px 50px -28px rgba(0,0,0,.65)}
+.bento .tp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 14%;transition:transform .9s}
+.bento .tp:hover img{transform:scale(1.05)}
+.bento .tp::after{content:"";position:absolute;inset:auto 0 0 0;height:55%;background:linear-gradient(transparent,rgba(17,36,65,.88))}
+.bento .tp.big{grid-row:1 / span 2;aspect-ratio:3/4.4}
+.bento .lab{position:absolute;z-index:2;left:16px;right:12px;bottom:14px;display:flex;align-items:center;gap:10px;font-family:var(--cond);text-transform:uppercase;letter-spacing:.07em;font-weight:700;font-size:19px;line-height:1.05}
+.bento .lab .ic{width:34px;height:34px;padding:8px;border-radius:50%;background:var(--green);color:#fff;flex:none}
+.bento .frame{position:absolute;z-index:-1;left:-18px;top:-18px;width:55%;height:55%;border:3px solid var(--green)}
 
 /* contact card overlapping hero */
 .reach{position:relative;z-index:5;margin-top:-100px}
@@ -245,7 +256,12 @@ footer .line .ic{color:var(--green-light);margin-top:3px}
   nav.open ul{flex-direction:column;gap:14px}
   .menu-btn{display:block}
   .hdr-cta .btn{display:none}
-  .hero{padding:90px 0 170px}
+  .hero{padding:70px 0 170px}
+  .hero-grid{grid-template-columns:1fr;gap:48px}
+  .hero .cta{flex-wrap:wrap}
+  .hero .cta .btn{width:100%;justify-content:center}
+  .facts li{font-size:14px}
+  .bento{max-width:520px}
   .reach .card{grid-template-columns:1fr}
   .reach .cell{border-right:0;border-bottom:1px solid var(--line);padding:24px 26px}
   .reach .cell:last-child{border-bottom:0}
@@ -265,9 +281,12 @@ footer .line .ic{color:var(--green-light);margin-top:3px}
   .strip .wrap,.strip .grp{justify-content:center;text-align:center}
   .strip .hide-s,.strip .hide-m{display:none}
   .hero{padding:70px 0 150px}
-  .eyebrow::before,.eyebrow::after{display:none}
-  .hero h1 .mid{font-size:.8em}
-  .hero h1{font-size:clamp(44px,13vw,70px)}
+  .eyebrow::before{width:24px}
+  .bento .lab{font-size:13px;left:10px;bottom:10px;gap:7px}
+  .bento .tp.big .lab{font-size:15px}
+  .bento .lab .ic{width:24px;height:24px;padding:5px}
+  .hero h1{font-size:clamp(38px,11.5vw,62px)}
+  .hero .tag{font-size:20px}
   .mission{padding:80px 0 60px}
   .about,.help{padding:80px 0}
   .help .pic{min-height:320px}
@@ -279,6 +298,32 @@ footer .line .ic{color:var(--green-light);margin-top:3px}
 }
 @media (prefers-reduced-motion:reduce){.pulse{animation:none}.rv{opacity:1;transform:none;transition:none}}
 </style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":["LocalBusiness","Plumber"],
+  "name":"Kleanchem Cleaning and Maintenance",
+  "url":"https://www.kleanchem.ca/",
+  "logo":"https://www.kleanchem.ca/uploads/1/2/5/9/125930492/published/logo.png?1596058874",
+  "description":"Plumbing, cleaning and maintenance services for homes and businesses in Edmonton, AB, including 24 hrs plumbing services.",
+  "telephone":"+1-780-695-2436",
+  "address":{"@type":"PostalAddress","streetAddress":"Unit 2- 7416 38 Avenue","addressLocality":"Edmonton","addressRegion":"AB","postalCode":"T6K 2P8","addressCountry":"CA"},
+  "areaServed":{"@type":"City","name":"Edmonton"},
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"16:30"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"10:00","closes":"15:00"}
+  ],
+  "hasOfferCatalog":{"@type":"OfferCatalog","name":"Edmonton plumbing, cleaning and maintenance services","itemListElement":[
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Plumbing repairs and installs in Edmonton"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Boiler installation and repair in Edmonton"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Hot water tank repair and installation in Edmonton"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Drain cleaning in Edmonton"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Home cleaning in Edmonton"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Office cleaning in Edmonton"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Organizing, renovation and painting help in Edmonton"}}
+  ]}
+}
+</script>
 </head>
 <body>
 
@@ -300,7 +345,7 @@ footer .line .ic{color:var(--green-light);margin-top:3px}
 <div class="strip">
   <div class="wrap">
     <div class="grp">
-      <span class="it"><span class="pulse"></span><b>24 hrs plumbing services</b></span>
+      <span class="it"><span class="pulse"></span><b>24 hrs plumbing services in Edmonton</b></span>
       <span class="it hide-s" style="white-space:nowrap"><svg class="ic"><use href="#i-clock"/></svg>Mon - Fri: 8am - 4:30pm &nbsp;|&nbsp; Sat - Sun: 10am - 3pm</span>
     </div>
     <div class="grp">
@@ -339,25 +384,34 @@ footer .line .ic{color:var(--green-light);margin-top:3px}
 <main>
 
 <section class="hero">
-  <div class="bg"><img src="https://www.kleanchem.ca/uploads/1/2/5/9/125930492/published/24978817211-7e95c1cdaa-b_2.jpg" data-fb="images/office.jpg" onerror="this.onerror=null;this.src=this.dataset.fb" alt="Home and office cleaning services"></div>
-  <svg class="ring" viewBox="0 0 1400 600" aria-hidden="true"><ellipse cx="700" cy="300" rx="660" ry="240" fill="none" stroke="#6b8e55" stroke-width="10" stroke-opacity=".6" transform="rotate(-6 700 300)"/></svg>
-  <div class="wrap">
-    <div class="eyebrow">Professional plumbing, cleaning and maintenance services</div>
-    <h1>
-      <span>Satisfied customers.</span>
-      <span class="mid">Professional service.</span>
-      <span>Happy you.</span>
-    </h1>
-    <p class="lede"><b>Call now to get a quote</b> - <span style="white-space:nowrap">780 695 2436 (Chem)</span></p>
-    <div class="cta">
-      <a class="btn btn-green" href="tel:7806952436"><svg class="ic"><use href="#i-phone"/></svg>780 695 2436</a>
-      <a class="btn btn-white" href="https://www.kleanchem.ca/contact.html">Contact us</a>
-      <a class="btn btn-ghost-light" href="https://www.kleanchem.ca/our-services.html">Our Services</a>
+  <div class="bg"><img src="https://www.kleanchem.ca/uploads/1/2/5/9/125930492/published/24978817211-7e95c1cdaa-b_2.jpg" data-fb="images/office.jpg" onerror="this.onerror=null;this.src=this.dataset.fb" alt="Home and office cleaning in Edmonton"></div>
+  <svg class="ring" viewBox="0 0 1000 560" aria-hidden="true"><ellipse cx="500" cy="280" rx="470" ry="230" fill="none" stroke="#6b8e55" stroke-width="12" stroke-opacity=".7"/></svg>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow">Edmonton, Alberta</div>
+      <h1>
+        <span>Edmonton plumbing,</span>
+        <span class="mid">cleaning and maintenance</span>
+        <span>services</span>
+      </h1>
+      <p class="tag">Satisfied customers. Professional service. Happy you.</p>
+      <p class="lede">Need a plumber, a cleaner or a hand with upkeep in Edmonton? Kleanchem covers plumbing repairs, drain cleaning, home and office cleaning and property maintenance for homes and businesses. <b>Call now to get a quote.</b></p>
+      <div class="cta">
+        <a class="btn btn-green" href="tel:7806952436"><svg class="ic"><use href="#i-phone"/></svg>780 695 2436</a>
+        <a class="btn btn-white" href="https://www.kleanchem.ca/contact.html">Contact us</a>
+        <a class="btn btn-ghost-light" href="https://www.kleanchem.ca/our-services.html">Our Services</a>
+      </div>
+      <ul class="facts">
+        <li><svg class="ic"><use href="#i-clock"/></svg>24 hrs plumbing services</li>
+        <li><svg class="ic"><use href="#i-home"/></svg>Residential and commercial</li>
+        <li><svg class="ic"><use href="#i-pin"/></svg>Edmonton, AB</li>
+      </ul>
     </div>
-    <div class="chips">
-      <a href="#services"><svg class="ic"><use href="#i-clean"/></svg>Cleaning</a>
-      <a href="#services"><svg class="ic"><use href="#i-wrench"/></svg>Plumbing</a>
-      <a href="#services"><svg class="ic"><use href="#i-home"/></svg>Maintenance</a>
+    <div class="bento rv">
+      <span class="frame" aria-hidden="true"></span>
+      <a class="tp big" href="#services"><img src="https://www.kleanchem.ca/uploads/1/2/5/9/125930492/img-20200318-204709260-2_orig.jpg" data-fb="images/hero-cleaning.jpg" onerror="this.onerror=null;this.src=this.dataset.fb" alt="Home cleaning in Edmonton"><span class="lab"><svg class="ic"><use href="#i-clean"/></svg>Cleaning in Edmonton</span></a>
+      <a class="tp" href="#services"><img src="https://www.kleanchem.ca/uploads/1/2/5/9/125930492/017fc762-de23-4744-b467-847146818273_orig.jpeg" data-fb="images/plumbing.jpg" onerror="this.onerror=null;this.src=this.dataset.fb" alt="Plumbing services in Edmonton"><span class="lab"><svg class="ic"><use href="#i-wrench"/></svg>Plumbing</span></a>
+      <a class="tp" href="#services"><img src="https://www.kleanchem.ca/uploads/1/2/5/9/125930492/published/istock-658680974_3.jpg" data-fb="images/maintenance.jpg" onerror="this.onerror=null;this.src=this.dataset.fb" alt="Maintenance and organizing in Edmonton"><span class="lab"><svg class="ic"><use href="#i-home"/></svg>Maintenance</span></a>
     </div>
   </div>
 </section>
@@ -384,11 +438,11 @@ footer .line .ic{color:var(--green-light);margin-top:3px}
 <section class="mission">
   <div class="wrap">
     <div class="label">Our Mission</div>
-    <p class="big rv">To <mark>tailor our professional services</mark> to the specific needs of each and every customer we work with.</p>
+    <p class="big rv">Our mission is to <mark>tailor our plumbing, cleaning and maintenance services</mark> in Edmonton to the specific needs of every customer we work with.</p>
     <div class="tiles rv">
-      <a class="tile" href="https://www.kleanchem.ca/our-services.html"><span class="circ"><svg class="ic"><use href="#i-clean"/></svg></span><span><strong>Cleaning</strong><span>Learn More</span></span></a>
-      <a class="tile" href="https://www.kleanchem.ca/our-services.html"><span class="circ"><svg class="ic"><use href="#i-wrench"/></svg></span><span><strong>Plumbing Services</strong><span>Learn More</span></span></a>
-      <a class="tile" href="https://www.kleanchem.ca/our-services.html"><span class="circ"><svg class="ic"><use href="#i-home"/></svg></span><span><strong>Maintenance Services</strong><span>Learn More</span></span></a>
+      <a class="tile" href="https://www.kleanchem.ca/our-services.html"><span class="circ"><svg class="ic"><use href="#i-clean"/></svg></span><span><strong>Cleaning in Edmonton</strong><span>Learn More</span></span></a>
+      <a class="tile" href="https://www.kleanchem.ca/our-services.html"><span class="circ"><svg class="ic"><use href="#i-wrench"/></svg></span><span><strong>Plumber in Edmonton</strong><span>Learn More</span></span></a>
+      <a class="tile" href="https://www.kleanchem.ca/our-services.html"><span class="circ"><svg class="ic"><use href="#i-home"/></svg></span><span><strong>Maintenance in Edmonton</strong><span>Learn More</span></span></a>
     </div>
   </div>
 </section>
@@ -396,19 +450,19 @@ footer .line .ic{color:var(--green-light);margin-top:3px}
 <section class="services" id="services">
   <div class="wrap">
     <div class="sec-head">
-      <h2>Our <em>services</em></h2>
+      <h2>Our <em>services</em> in Edmonton</h2>
       <a class="btn btn-green" href="tel:7806952436"><svg class="ic"><use href="#i-phone"/></svg>Call now to get a quote</a>
     </div>
 
     <div class="cards">
       <article class="svc rv">
-        <div class="pic"><div class="in"><img src="https://www.kleanchem.ca/uploads/1/2/5/9/125930492/img-20200318-204709260-2_orig.jpg" data-fb="images/hero-cleaning.jpg" onerror="this.onerror=null;this.src=this.dataset.fb" alt="Home cleaning services"></div>
+        <div class="pic"><div class="in"><img src="https://www.kleanchem.ca/uploads/1/2/5/9/125930492/img-20200318-204709260-2_orig.jpg" data-fb="images/hero-cleaning.jpg" onerror="this.onerror=null;this.src=this.dataset.fb" alt="Home cleaning services in Edmonton"></div>
           <span class="badge"><svg class="ic"><use href="#i-clean"/></svg></span>
         </div>
         <div class="body">
-          <h3>Cleaning</h3>
-          <p>Our team provides a full range of services to ensure your home is clean, sanitized, smelling fresh, and looking great.</p>
-          <p>Keeping your workplace clean and tidy is critical to maintaining a healthy and productive work environment. Let us help clean up the mess!</p>
+          <h3>Cleaning Services in Edmonton</h3>
+          <p>Our Edmonton cleaning team provides a full range of home cleaning services, so your house is clean, sanitized, smelling fresh and looking great.</p>
+          <p>Need office cleaning in Edmonton? Keeping your workplace clean and tidy is critical to a healthy, productive work environment. Let us help clean up the mess!</p>
           <div class="acts">
             <a class="btn btn-navy btn-sm" href="https://www.kleanchem.ca/our-services.html">Learn More <svg class="ic"><use href="#i-arrow"/></svg></a>
             <a class="btn btn-ghost btn-sm" href="tel:7806952436">Call now</a>
@@ -417,16 +471,17 @@ footer .line .ic{color:var(--green-light);margin-top:3px}
       </article>
 
       <article class="svc rv">
-        <div class="pic"><div class="in"><img src="https://www.kleanchem.ca/uploads/1/2/5/9/125930492/017fc762-de23-4744-b467-847146818273_orig.jpeg" data-fb="images/plumbing.jpg" onerror="this.onerror=null;this.src=this.dataset.fb" alt="Office cleaning services"></div>
+        <div class="pic"><div class="in"><img src="https://www.kleanchem.ca/uploads/1/2/5/9/125930492/017fc762-de23-4744-b467-847146818273_orig.jpeg" data-fb="images/plumbing.jpg" onerror="this.onerror=null;this.src=this.dataset.fb" alt="Plumbing services in Edmonton"></div>
           <span class="badge"><svg class="ic"><use href="#i-wrench"/></svg></span>
         </div>
         <div class="body">
-          <h3>Plumbing Services</h3>
+          <h3>Plumber in Edmonton</h3>
+          <p>Looking for a plumber in Edmonton? We handle residential and commercial plumbing, with 24 hrs plumbing services when you need help fast.</p>
           <ul>
-            <li>Plumbing repairs, Plumbing Installs</li>
-            <li>Boiler Installations and Repairs</li>
-            <li>Hot water tank repairs and Installs</li>
-            <li>Drain Cleaning</li>
+            <li>Plumbing repairs and installs in Edmonton</li>
+            <li>Boiler installation and repair</li>
+            <li>Hot water tank repair and installation</li>
+            <li>Drain cleaning in Edmonton</li>
           </ul>
           <div class="acts">
             <a class="btn btn-navy btn-sm" href="https://www.kleanchem.ca/our-services.html">Learn More <svg class="ic"><use href="#i-arrow"/></svg></a>
@@ -436,13 +491,13 @@ footer .line .ic{color:var(--green-light);margin-top:3px}
       </article>
 
       <article class="svc rv">
-        <div class="pic"><div class="in"><img src="https://www.kleanchem.ca/uploads/1/2/5/9/125930492/published/istock-658680974_3.jpg" data-fb="images/maintenance.jpg" onerror="this.onerror=null;this.src=this.dataset.fb" alt="Organizing services"></div>
+        <div class="pic"><div class="in"><img src="https://www.kleanchem.ca/uploads/1/2/5/9/125930492/published/istock-658680974_3.jpg" data-fb="images/maintenance.jpg" onerror="this.onerror=null;this.src=this.dataset.fb" alt="Maintenance and organizing services in Edmonton"></div>
           <span class="badge"><svg class="ic"><use href="#i-home"/></svg></span>
         </div>
         <div class="body">
-          <h3>Maintenance Services</h3>
-          <p>Feel like the clutter is closing in on you? We can help clean out and organize any and all spaces, residential or commercial.</p>
-          <p>We can help renovations and painting project.</p>
+          <h3>Maintenance and Organizing in Edmonton</h3>
+          <p>Feel like the clutter is closing in on you? We help clean out and organize any space in Edmonton, residential or commercial.</p>
+          <p>We also help with renovation and painting projects.</p>
           <div class="acts">
             <a class="btn btn-navy btn-sm" href="https://www.kleanchem.ca/our-services.html">Learn More <svg class="ic"><use href="#i-arrow"/></svg></a>
             <a class="btn btn-ghost btn-sm" href="tel:7806952436">Call now</a>
@@ -456,13 +511,13 @@ footer .line .ic{color:var(--green-light);margin-top:3px}
 <section class="about">
   <div class="wrap">
     <div class="photo rv">
-      <div class="frame"><img src="https://www.kleanchem.ca/uploads/1/2/5/9/125930492/pictures_orig.jpg" data-fb="images/maintenance.jpg" onerror="this.onerror=null;this.src=this.dataset.fb" alt="Home and office cleaning services"></div>
+      <div class="frame"><img src="https://www.kleanchem.ca/uploads/1/2/5/9/125930492/pictures_orig.jpg" data-fb="images/maintenance.jpg" onerror="this.onerror=null;this.src=this.dataset.fb" alt="Home and office cleaning in Edmonton"></div>
     </div>
     <div class="rv">
-      <h2>About Our Company</h2>
-      <p class="first">Since day one, our company has believed in getting the job done right, on time and on budget.</p>
-      <p>We are proud to offer our quality cleaning, plumbing and maintenance services to both residential and commercial properties. We strive to provide work that not only meets our customers' needs but exceeds them.</p>
-      <p>Our team of experienced professionals understand that our customers' best interests are our best interests. Whether the job is big or small, you can trust us to handle it all!</p>
+      <h2>About Kleanchem in Edmonton</h2>
+      <p class="first">Since day one, Kleanchem has believed in getting the job done right, on time and on budget.</p>
+      <p>We are proud to offer quality cleaning, plumbing and maintenance services to residential and commercial properties in Edmonton. We strive to deliver work that not only meets our customers' needs but exceeds them.</p>
+      <p>Our experienced team understands that your best interests are our best interests. Whether the job is big or small, you can trust us to handle it all!</p>
       <div class="cta">
         <a class="btn btn-navy" href="https://www.kleanchem.ca/our-services.html">Our Services</a>
         <a class="btn btn-ghost" href="tel:7806952436"><svg class="ic"><use href="#i-phone"/></svg>780 695 2436</a>
@@ -482,16 +537,16 @@ footer .line .ic{color:var(--green-light);margin-top:3px}
   <div class="wrap">
     <div class="card rv">
       <div class="txt">
-        <div class="kick">Commercial and residential</div>
-        <h2>Get <em>Our</em> Help</h2>
-        <p>We offer a variety of commercial and residential cleaning, plumbing and maintenance services. Click the button below to learn how we can be of service to you!</p>
+        <div class="kick">Edmonton, AB</div>
+        <h2>Get help in <em>Edmonton</em></h2>
+        <p>We offer a variety of commercial and residential cleaning, plumbing and maintenance services in Edmonton. Call 780-695-CHEM or see our services to learn how we can help.</p>
         <div class="cta">
           <a class="btn btn-green" href="https://www.kleanchem.ca/our-services.html">Our Services</a>
           <a class="btn btn-ghost-light" href="https://www.kleanchem.ca/contact.html">Contact us</a>
         </div>
         <a class="tel" href="tel:7806952436"><small>Call now to get a quote</small>780-695-CHEM (2436)</a>
       </div>
-      <div class="pic"><img src="https://www.kleanchem.ca/uploads/1/2/5/9/125930492/017fc762-de23-4744-b467-847146818273_orig.jpeg" data-fb="images/plumbing.jpg" onerror="this.onerror=null;this.src=this.dataset.fb" alt="Plumbing services"></div>
+      <div class="pic"><img src="https://www.kleanchem.ca/uploads/1/2/5/9/125930492/017fc762-de23-4744-b467-847146818273_orig.jpeg" data-fb="images/plumbing.jpg" onerror="this.onerror=null;this.src=this.dataset.fb" alt="Plumbing services in Edmonton"></div>
     </div>
   </div>
 </section>
@@ -515,8 +570,8 @@ footer .line .ic{color:var(--green-light);margin-top:3px}
         <img src="https://www.kleanchem.ca/uploads/1/2/5/9/125930492/published/logo.png?1596058874" alt="Kleanchem Cleaning and Maintenance" onerror="this.onerror=null;this.style.display='none';this.nextElementSibling.style.display='block'">
         <svg viewBox="0 0 960 290" role="img" aria-label="Kleanchem Cleaning and Maintenance"><use href="#kc-logo"/></svg>
       </a>
-      <p class="about-line">Cleaning, plumbing and maintenance services for residential and commercial properties.</p>
-      <div class="tags"><span>Cleaning</span><span>Plumbing</span><span>Maintenance</span></div>
+      <p class="about-line">Plumbing, cleaning and maintenance services for homes and businesses in Edmonton, AB.</p>
+      <div class="tags"><span>Edmonton plumber</span><span>Cleaning</span><span>Maintenance</span></div>
     </div>
     <div>
       <h4>Site Links</h4>
@@ -529,14 +584,15 @@ footer .line .ic{color:var(--green-light);margin-top:3px}
       </ul>
     </div>
     <div>
-      <h4>Services</h4>
+      <h4>Services in Edmonton</h4>
       <ul>
-        <li><a href="https://www.kleanchem.ca/our-services.html">Cleaning</a></li>
-        <li><a href="https://www.kleanchem.ca/our-services.html">Plumbing repairs</a></li>
-        <li><a href="https://www.kleanchem.ca/our-services.html">Boiler Installations and Repairs</a></li>
-        <li><a href="https://www.kleanchem.ca/our-services.html">Hot water tank repairs</a></li>
-        <li><a href="https://www.kleanchem.ca/our-services.html">Drain Cleaning</a></li>
-        <li><a href="https://www.kleanchem.ca/our-services.html">Maintenance Services</a></li>
+        <li><a href="https://www.kleanchem.ca/our-services.html">Edmonton plumber</a></li>
+        <li><a href="https://www.kleanchem.ca/our-services.html">Boiler installation and repair</a></li>
+        <li><a href="https://www.kleanchem.ca/our-services.html">Hot water tank repair</a></li>
+        <li><a href="https://www.kleanchem.ca/our-services.html">Drain cleaning</a></li>
+        <li><a href="https://www.kleanchem.ca/our-services.html">Home cleaning</a></li>
+        <li><a href="https://www.kleanchem.ca/our-services.html">Office cleaning</a></li>
+        <li><a href="https://www.kleanchem.ca/our-services.html">Maintenance and organizing</a></li>
       </ul>
     </div>
     <div>
