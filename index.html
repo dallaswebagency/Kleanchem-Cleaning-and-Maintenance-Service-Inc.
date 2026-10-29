@@ -79,10 +79,10 @@ nav a:hover::after,nav a.on::after{width:100%}
 /* hero: split with photo grid */
 .hero{position:relative;color:#fff;padding:76px 0 210px;background:var(--navy-deep);overflow:hidden;isolation:isolate}
 .hero .bg{position:absolute;inset:0;z-index:-3}
-.hero .bg img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;opacity:1;filter:saturate(1.05)}
-.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(100deg,rgba(17,36,65,.95) 0%,rgba(17,36,65,.82) 42%,rgba(31,68,120,.45) 75%,rgba(31,68,120,.3) 100%)}
-.hero .ring{position:absolute;right:-8%;top:50%;width:min(980px,90vw);transform:translateY(-50%) rotate(-14deg);z-index:-1;opacity:.4;pointer-events:none}
-.hero-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:center}
+.hero .bg img{width:100%;height:100%;object-fit:cover;object-position:100% 50%;opacity:1}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(100deg,rgba(17,36,65,.94) 0%,rgba(17,36,65,.84) 38%,rgba(17,36,65,.3) 62%,rgba(17,36,65,.05) 100%)}
+.hero .ring{position:absolute;right:-8%;top:50%;width:min(980px,90vw);transform:translateY(-50%) rotate(-14deg);z-index:-1;opacity:.25;pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:minmax(0,640px);gap:56px;align-items:center}
 .eyebrow{display:inline-flex;align-items:center;gap:14px;font-family:var(--cond);font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--green-light);font-size:16px;margin-bottom:24px}
 .eyebrow::before{content:"";width:46px;height:3px;background:var(--green);flex:none}
 .hero h1{font-family:var(--cond);font-weight:700;text-transform:uppercase;line-height:.94;font-size:clamp(40px,5vw,76px);letter-spacing:.005em}
@@ -258,6 +258,7 @@ footer .line .ic{color:var(--green-light);margin-top:3px}
   .hdr-cta .btn{display:none}
   .hero{padding:70px 0 170px}
   .hero-grid{grid-template-columns:1fr;gap:48px}
+  .hero::before{background:linear-gradient(180deg,rgba(17,36,65,.9),rgba(17,36,65,.78))}
   .hero .cta{flex-wrap:wrap}
   .hero .cta .btn{width:100%;justify-content:center}
   .facts li{font-size:14px}
@@ -384,7 +385,7 @@ footer .line .ic{color:var(--green-light);margin-top:3px}
 <main>
 
 <section class="hero">
-  <div class="bg"><img src="https://www.kleanchem.ca/uploads/1/2/5/9/125930492/published/24978817211-7e95c1cdaa-b_2.jpg" data-fb="images/office.jpg" onerror="this.onerror=null;this.src=this.dataset.fb" alt="Home and office cleaning in Edmonton"></div>
+  <div class="bg"><img src="images/hero-bg.jpg" alt="Commercial and office cleaning in Edmonton"></div>
   <svg class="ring" viewBox="0 0 1000 560" aria-hidden="true"><ellipse cx="500" cy="280" rx="470" ry="230" fill="none" stroke="#6b8e55" stroke-width="12" stroke-opacity=".7"/></svg>
   <div class="wrap hero-grid">
     <div class="hero-copy">
@@ -407,13 +408,7 @@ footer .line .ic{color:var(--green-light);margin-top:3px}
         <li><svg class="ic"><use href="#i-pin"/></svg>Edmonton, AB</li>
       </ul>
     </div>
-    <div class="bento rv">
-      <span class="frame" aria-hidden="true"></span>
-      <a class="tp big" href="#services"><img src="https://www.kleanchem.ca/uploads/1/2/5/9/125930492/img-20200318-204709260-2_orig.jpg" data-fb="images/hero-cleaning.jpg" onerror="this.onerror=null;this.src=this.dataset.fb" alt="Home cleaning in Edmonton"><span class="lab"><svg class="ic"><use href="#i-clean"/></svg>Cleaning in Edmonton</span></a>
-      <a class="tp" href="#services"><img src="https://www.kleanchem.ca/uploads/1/2/5/9/125930492/017fc762-de23-4744-b467-847146818273_orig.jpeg" data-fb="images/plumbing.jpg" onerror="this.onerror=null;this.src=this.dataset.fb" alt="Plumbing services in Edmonton"><span class="lab"><svg class="ic"><use href="#i-wrench"/></svg>Plumbing</span></a>
-      <a class="tp" href="#services"><img src="https://www.kleanchem.ca/uploads/1/2/5/9/125930492/published/istock-658680974_3.jpg" data-fb="images/maintenance.jpg" onerror="this.onerror=null;this.src=this.dataset.fb" alt="Maintenance and organizing in Edmonton"><span class="lab"><svg class="ic"><use href="#i-home"/></svg>Maintenance</span></a>
-    </div>
-  </div>
+      </div>
 </section>
 
 <section class="reach" aria-label="Contact details and hours">
