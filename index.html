@@ -79,7 +79,7 @@ nav a:hover::after,nav a.on::after{width:100%}
 /* hero: background image, centered */
 .hero{position:relative;color:#fff;text-align:center;padding:120px 0 200px;background:var(--navy-deep);overflow:hidden;isolation:isolate}
 .hero .bg{position:absolute;inset:0;z-index:-2}
-.hero .bg img{width:100%;height:100%;object-fit:cover}
+.hero .bg img{width:100%;height:100%;object-fit:cover;object-position:50% 12%}
 .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(17,36,65,.84) 0%,rgba(17,36,65,.7) 48%,rgba(17,36,65,.94) 100%),radial-gradient(circle at 50% 40%,rgba(107,142,85,.28),transparent 60%)}
 .hero .ring{position:absolute;left:50%;top:46%;width:min(1400px,140vw);transform:translate(-50%,-50%);z-index:-1;opacity:.55;pointer-events:none}
 .eyebrow{display:inline-flex;align-items:center;gap:16px;font-family:var(--cond);font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--green-light);font-size:16px;margin-bottom:26px}
@@ -134,7 +134,7 @@ nav a:hover::after,nav a.on::after{width:100%}
 .svc:hover{transform:translateY(-10px);box-shadow:0 40px 70px -36px rgba(17,36,65,.6)}
 .svc .pic{position:relative;aspect-ratio:4/3;background:var(--teal)}
 .svc .pic .in{position:absolute;inset:0;overflow:hidden}
-.svc .pic img{width:100%;height:100%;object-fit:cover;transition:transform .9s}
+.svc .pic img{width:100%;height:100%;object-fit:cover;object-position:50% 15%;transition:transform .9s;transform-origin:50% 15%}
 .svc:hover .pic img{transform:scale(1.07)}
 .svc .pic .in::after{content:"";position:absolute;inset:auto 0 0 0;height:45%;background:linear-gradient(transparent,rgba(17,36,65,.55))}
 .svc .badge{position:absolute;z-index:2;right:24px;bottom:-30px;width:60px;height:60px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;border:5px solid #fff;box-shadow:0 10px 20px -8px rgba(17,36,65,.5)}
@@ -158,7 +158,7 @@ nav a:hover::after,nav a.on::after{width:100%}
 .about .photo::before{content:"";position:absolute;left:-24px;top:-24px;width:62%;height:62%;background:var(--green-soft)}
 .about .photo::after{content:"";position:absolute;right:-24px;bottom:-24px;width:46%;height:46%;border:3px solid var(--green)}
 .about .photo .frame{position:relative;z-index:1;aspect-ratio:1/1;overflow:hidden;background:var(--teal)}
-.about .photo img{width:100%;height:100%;object-fit:cover}
+.about .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 15%}
 .about h2{font-family:var(--cond);text-transform:uppercase;font-weight:700;color:var(--navy-deep);font-size:clamp(40px,5vw,68px);line-height:.96;margin:0 0 22px}
 .about p{font-size:18px;color:#26364b;margin-bottom:16px;max-width:560px}
 .about p.first{font-weight:500;color:var(--navy-deep)}
@@ -171,20 +171,23 @@ nav a:hover::after,nav a.on::after{width:100%}
 .statement p{font-family:var(--serif);font-style:italic;font-size:clamp(36px,6.2vw,88px);line-height:1.06;letter-spacing:-.015em}
 .statement p b{font-family:var(--cond);font-style:normal;text-transform:uppercase;font-weight:700;color:var(--green-light);letter-spacing:.01em}
 
-/* help CTA: full bleed image */
-.help{position:relative;isolation:isolate;overflow:hidden;color:#fff;text-align:center;padding:130px 0;background:var(--navy)}
-.help .bg{position:absolute;inset:0;z-index:-2}
-.help .bg img{width:100%;height:100%;object-fit:cover}
-.help::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(115deg,rgba(17,36,65,.93),rgba(31,68,120,.82) 55%,rgba(63,100,112,.78))}
-.help::after{content:"";position:absolute;z-index:-1;left:50%;top:50%;width:min(1100px,120vw);aspect-ratio:2/1;transform:translate(-50%,-50%) rotate(-8deg);border:12px solid rgba(185,214,163,.32);border-radius:50%;pointer-events:none}
+/* help CTA: split, photo beside the text so faces are never covered */
+.help{padding:120px 0;background:var(--paper)}
+.help .card{display:grid;grid-template-columns:1.05fr .95fr;background:var(--navy-deep);color:#fff;position:relative;overflow:hidden;box-shadow:0 40px 70px -40px rgba(17,36,65,.7)}
+.help .card::before{content:"";position:absolute;z-index:1;left:-160px;bottom:-200px;width:520px;height:520px;border-radius:50%;border:56px solid rgba(107,142,85,.22);pointer-events:none}
+.help .txt{position:relative;z-index:2;padding:76px 64px}
 .help .kick{display:inline-flex;align-items:center;gap:14px;font-family:var(--cond);text-transform:uppercase;letter-spacing:.18em;font-weight:600;font-size:15px;color:var(--green-light);margin-bottom:20px}
-.help .kick::before,.help .kick::after{content:"";width:34px;height:3px;background:var(--green)}
-.help h2{font-family:var(--cond);text-transform:uppercase;font-weight:700;font-size:clamp(50px,8vw,116px);line-height:.92;margin-bottom:24px}
+.help .kick::before{content:"";width:34px;height:3px;background:var(--green)}
+.help h2{font-family:var(--cond);text-transform:uppercase;font-weight:700;font-size:clamp(48px,6.4vw,96px);line-height:.92;margin-bottom:24px}
 .help h2 em{font-family:var(--serif);font-style:italic;text-transform:none;font-weight:400;color:var(--green-light)}
-.help p{font-size:20px;color:#e0eaf6;max-width:680px;margin:0 auto 36px}
-.help .tel{display:block;margin-top:34px;font-family:var(--cond);font-weight:700;font-size:clamp(34px,5vw,56px);letter-spacing:.03em}
-.help .tel small{display:block;font-weight:600;font-size:14px;letter-spacing:.18em;color:var(--green-light);text-transform:uppercase;margin-bottom:4px}
+.help p{font-size:19px;color:#dbe6f4;max-width:520px;margin-bottom:32px}
+.help .cta{justify-content:flex-start;margin-top:0}
+.help .tel{display:block;margin-top:34px;padding-top:26px;border-top:1px solid rgba(255,255,255,.18);font-family:var(--cond);font-weight:700;font-size:clamp(32px,4vw,48px);letter-spacing:.03em;line-height:1.05}
+.help .tel small{display:block;font-weight:600;font-size:14px;letter-spacing:.18em;color:var(--green-light);text-transform:uppercase;margin-bottom:6px}
 .help .tel:hover{color:var(--green-light)}
+.help .pic{position:relative;min-height:560px;background:var(--teal)}
+.help .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 12%}
+.help .pic::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(17,36,65,.55),transparent 40%)}
 
 /* footer */
 footer{background:var(--navy-deep);color:#cfdbec}
@@ -250,6 +253,9 @@ footer .line .ic{color:var(--green-light);margin-top:3px}
   .cards{grid-template-columns:1fr;max-width:560px;margin-inline:auto}
   .about .wrap{grid-template-columns:1fr;gap:64px}
   .about .photo{margin:0 24px}
+  .help .card{grid-template-columns:1fr}
+  .help .pic{order:-1;min-height:380px}
+  .help .txt{padding:48px 30px}
   .foot{grid-template-columns:1fr 1fr}
 }
 @media (max-width:600px){
@@ -264,6 +270,7 @@ footer .line .ic{color:var(--green-light);margin-top:3px}
   .hero h1{font-size:clamp(44px,13vw,70px)}
   .mission{padding:80px 0 60px}
   .about,.help{padding:80px 0}
+  .help .pic{min-height:320px}
   .statement{padding:100px 0}
   .fcta .wrap{text-align:center;justify-content:center}
   .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--navy-deep);border-top:3px solid var(--green)}
@@ -472,17 +479,19 @@ footer .line .ic{color:var(--green-light);margin-top:3px}
 </section>
 
 <section class="help">
-  <div class="bg"><img src="https://www.kleanchem.ca/uploads/1/2/5/9/125930492/017fc762-de23-4744-b467-847146818273_orig.jpeg" data-fb="images/plumbing.jpg" onerror="this.onerror=null;this.src=this.dataset.fb" alt=""></div>
   <div class="wrap">
-    <div class="rv">
-      <div class="kick">Commercial and residential</div>
-      <h2>Get <em>Our</em> Help</h2>
-      <p>We offer a variety of commercial and residential cleaning, plumbing and maintenance services. Click the button below to learn how we can be of service to you!</p>
-      <div class="cta">
-        <a class="btn btn-green" href="https://www.kleanchem.ca/our-services.html">Our Services</a>
-        <a class="btn btn-ghost-light" href="https://www.kleanchem.ca/contact.html">Contact us</a>
+    <div class="card rv">
+      <div class="txt">
+        <div class="kick">Commercial and residential</div>
+        <h2>Get <em>Our</em> Help</h2>
+        <p>We offer a variety of commercial and residential cleaning, plumbing and maintenance services. Click the button below to learn how we can be of service to you!</p>
+        <div class="cta">
+          <a class="btn btn-green" href="https://www.kleanchem.ca/our-services.html">Our Services</a>
+          <a class="btn btn-ghost-light" href="https://www.kleanchem.ca/contact.html">Contact us</a>
+        </div>
+        <a class="tel" href="tel:7806952436"><small>Call now to get a quote</small>780-695-CHEM (2436)</a>
       </div>
-      <a class="tel" href="tel:7806952436"><small>Call now to get a quote</small>780-695-CHEM (2436)</a>
+      <div class="pic"><img src="https://www.kleanchem.ca/uploads/1/2/5/9/125930492/017fc762-de23-4744-b467-847146818273_orig.jpeg" data-fb="images/plumbing.jpg" onerror="this.onerror=null;this.src=this.dataset.fb" alt="Plumbing services"></div>
     </div>
   </div>
 </section>
